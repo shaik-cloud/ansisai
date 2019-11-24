@@ -1,15 +1,22 @@
 ---
-- hosts: webservers
+- hosts: all
   become: yes
   tasks:
+  - name: install maven
+    apt:
+      name: maven
+      state: present
+      tags:
+        maven
   - name: install git
     apt:
       name: git
+      state: present
     tags:
-    - install git
+      install git
   - name: install apache2
     apt:
       name: apache2
       state: present
     tags:
-    - install apache2
+      install apache2
