@@ -1,11 +1,11 @@
 1.Tags:
 
-ansible-playbook ans.yml --tags "maven" --> To execute the Particular task in a playbook(should use apt-inside name)
-ansible-playbook ans.yml --skip-tags "maven" --> to skip the particular task in a playbook(should use apt-inside name)
+ansible-playbook ans.yml --tags "maven"    --> To execute the Particular task in a playbook(should use apt-inside name{maven while providing in inverted commas})
+ansible-playbook ans.yml --skip-tags "maven"    --> to skip the particular task in a playbook(should use apt-inside name{maven while providing in inverted commas})
 
 2.Step and start:
 
-ansible-playbook ans.yml --step --start-at-task "install maven" --> if you use step and start,it will ask permission to execute for Every Task you've written in the playbook
- If you provide (Y) --> it will execute the maven task
- If you provide (N) --> it wont execute the maven task
- If you provide (C) --> it will execute from the maven task and it will continue th other remaining tasks in that playbook.
+ansible-playbook ans.yml --step --start-at-task "install maven"    --> if you use step and start,it will ask permission to execute for Every Task you've written in the playbook(you should use main name-install maven while providing in inverted commas)
+ If you provide (Y)   --> it will execute the maven task
+ If you provide (N)   --> it wont execute the maven task
+ If you provide (C)   --> it will execute from the maven task and it will continue the other remaining tasks in that playbook.
